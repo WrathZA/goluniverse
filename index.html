@@ -1,0 +1,36 @@
+
+<!--Work in Progress. -->
+<html>
+<head>
+  <title></title>
+  <script src="universe.js"></script>
+</head>
+<body onload="init();">
+  <canvas id="myCanvas" width="500" height="1000" style="border:1px solid #d3d3d3;"></canvas>
+  </p>
+  <div>
+    Hackup of Conway's game of life styled as a "universe". Cells that are born are white (age of zero) and turn pink when they're 1 generation old. They "heatmap" after that. This is a work in progress. Very CPU intensive calculation in the background. Smaller blocksize at a high resolution can crash your browser :)
+  </div>
+  </p>
+  <div>
+    height: <input id="height" type="number" value="500" />
+    width: <input id="width" type="number" value ="1000"/>
+    <input id="calc" type="button" onclick="initRandomMatrix()" value="Random"/>
+    <input id="timerButton" type="button" value="Start Timer" onClick="toggleTimer()"/>
+  </div>
+  <div>
+    interval:
+    <input id="interval" type="range" min ="1" max="1000" defaultValue="100" value="100" onchange="rangeChange()"/>
+    <span id="rangeText">150</span>ms
+   </div>
+   <div>
+    blocksize:
+    <input id="blockSize" type="range" min="5" max="15" defaultValue="8" value="8" onchange="blockSizeChange()"/>
+    <span id="blockSizeText">8</span>
+  </div>
+  <div>
+    exploding sun after 500
+    <input id="explodingStar" type="checkbox" checked="false"/>
+  </div>
+</body>
+</html>
